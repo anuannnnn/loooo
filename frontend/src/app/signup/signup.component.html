@@ -1,0 +1,53 @@
+<div class="hoo">
+
+<div class="card-body">
+    <form class="form col-md-6" #userlogin="ngForm" (ngSubmit)="userVerify()" action="header.component.html">
+        <div class="form-group">
+            
+            <label for="name">FIRSTNAME</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="User.Name" name="xname" #Name="ngModel" [class.is-invalid]="Name.invalid && Name.touched" pattern="[a-zA-z]*" required>
+        <small class="text-danger" [class.d-non]="email.valid || email.touched"><br>Enter valid name</small>
+        </div>
+        <br> 
+        
+        <div class="form-group">
+            
+            <label for="name">ADDRESS</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="User.Address" name="yname" #Address="ngModel" [class.is-invalid]="Address.invalid && Address.touched" pattern="[a-zA-z]*" required>
+        <small class="text-danger" [class.d-non]="email.valid || email.touched"><br>Enter valid address</small>
+        </div>
+        <br> 
+            
+        <div class="form-group">
+            
+            <label for="name">PHONENUMBER</label>
+            <br>
+            <input type="number" class="form-control" [(ngModel)]="User.Phone" name="tname" #Phone="ngModel" [class.is-invalid]="Phone.invalid && Phone.touched" pattern="[0-9]*" required>
+        <small class="text-danger" [class.d-non]="email.valid || email.touched"><br>Enter valid Phone</small>
+        </div>
+        <br>   
+             
+           
+        
+        <div class="form-group">
+            
+            <label for="email">EMAIL</label>
+            <br>
+            <input type="email" class="form-control" [(ngModel)]="User.username" name="uname" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" pattern="^[a-z0-9.%+]+@[a-z0-9.-]+\.[a-z]{2,4}" required>
+        <small class="text-danger" [class.d-non]="email.valid || email.touched"><br>Enter valid email</small>
+        </div>
+        <br>
+         <div class="form-group">
+            <label type="password">PASSWORD</label>
+            <br>
+            <input type="password" class="form-control" [(ngModel)]="User.password" name="password" minlength="6" required/>
+           
+         </div>
+        
+        <br>
+        <button class="btn btn-primary" [disabled]="userlogin.form.invalid">Confirm identity</button>
+        </form>
+</div>
+

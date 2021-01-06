@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "libra"
+  "defaultProject": "libra",
+  "cli": {
+    "analytics": "b9cd3d13-ddab-4ab8-af54-f608e7d52d4f"
+  }
 }
